@@ -22,15 +22,15 @@
 }
 
 /** 按钮图片 */
-@property (nonatomic, strong) NSArray   * buttonImgNames;
+@property (nonatomic, strong) NSArray *buttonImgNames;
 /** 按钮不可用图片 */
-@property (nonatomic, strong) NSArray   * btnEnableImgNames;
+@property (nonatomic, strong) NSArray *btnEnableImgNames;
 
-@property (nonatomic, strong) FMMyDrawer * myDrawer;
+@property (nonatomic, strong) FMMyDrawer *myDrawer;
 
-@property (nonatomic, strong) UIButton * delAllBtn;//删除
-@property (nonatomic, strong) UIButton * fwBtn;//上一步
-@property (nonatomic, strong) UIButton * ntBtn;//下一步
+@property (nonatomic, strong) UIButton *delAllBtn;//删除
+@property (nonatomic, strong) UIButton *fwBtn;//上一步
+@property (nonatomic, strong) UIButton *ntBtn;//下一步
 
 @end
 

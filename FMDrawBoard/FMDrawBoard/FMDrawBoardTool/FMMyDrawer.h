@@ -15,11 +15,11 @@
 /**
  *  撤销的线条数组
  */
-@property (nonatomic, strong)NSMutableArray * canceledLines;
+@property (nonatomic, strong)NSMutableArray *canceledLines;
 /**
  *  线条数组
  */
-@property (nonatomic, strong)NSMutableArray * lines;
+@property (nonatomic, strong)NSMutableArray *lines;
 
 /**
  *  清屏
