@@ -36,35 +36,6 @@
 
 @implementation FMDrawBoarderView
 
-- (FMMyDrawer *)myDrawer
-{
-    if (_myDrawer == nil) {
-        _myDrawer = [[FMMyDrawer alloc] initWithFrame:CGRectMake(0, 0, SCREEN_SIZE.width*5, SCREEN_SIZE.height*2)];
-        _myDrawer.layer.backgroundColor = [UIColor clearColor].CGColor;
-    }
-    return _myDrawer;
-    
-}
-
-
-- (NSArray *)btnEnableImgNames
-{
-    if (_btnEnableImgNames == nil) {
-        _btnEnableImgNames = @[@"close_draft_enable",@"delete_draft_enable",@"undo_draft_enable",@"redo_draft_enable"];
-    }
-    return _btnEnableImgNames;
-}
-
-
-- (NSArray *)buttonImgNames
-{
-    if (_buttonImgNames == nil) {
-        _buttonImgNames = @[@"close_draft",@"delete_draft",@"undo_draft",@"redo_draft"];
-    }
-    return _buttonImgNames;
-}
-
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     frame = CGRectMake(0, SCREEN_SIZE.height, SCREEN_SIZE.width, SCREEN_SIZE.height);
@@ -124,7 +95,7 @@
     return self;
 }
 
-
+#pragma mark - Public methods
 - (void)show {
     
     _myDrawer.lines = [NSMutableArray arrayWithArray:self.linesInfo];
@@ -171,7 +142,7 @@
                      }];
 }
 
-
+#pragma mark - Events
 - (void)btnClick:(UIButton *)sender
 {
     switch (sender.tag) {
@@ -192,6 +163,7 @@
     }
 }
 
+#pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary<NSString *,id> *)change
@@ -219,6 +191,35 @@
     }
 }
 
+
+#pragma mark - getter & setter
+- (FMMyDrawer *)myDrawer
+{
+    if (_myDrawer == nil) {
+        _myDrawer = [[FMMyDrawer alloc] initWithFrame:CGRectMake(0, 0, SCREEN_SIZE.width*5, SCREEN_SIZE.height*2)];
+        _myDrawer.layer.backgroundColor = [UIColor clearColor].CGColor;
+    }
+    return _myDrawer;
+    
+}
+
+
+- (NSArray *)btnEnableImgNames
+{
+    if (_btnEnableImgNames == nil) {
+        _btnEnableImgNames = @[@"close_draft_enable",@"delete_draft_enable",@"undo_draft_enable",@"redo_draft_enable"];
+    }
+    return _btnEnableImgNames;
+}
+
+
+- (NSArray *)buttonImgNames
+{
+    if (_buttonImgNames == nil) {
+        _buttonImgNames = @[@"close_draft",@"delete_draft",@"undo_draft",@"redo_draft"];
+    }
+    return _buttonImgNames;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -33,6 +33,14 @@
     }];
 }
 
+#pragma mark - Events
+- (void)startAction:(id)sender
+{
+    _drawBoardView = [[FMDrawBoarderView alloc] init];
+    [_drawBoardView show];
+}
+
+#pragma mark - getter & setter
 - (UIButton *)startBtn
 {
     if (!_startBtn) {
@@ -43,12 +51,6 @@
         [_startBtn addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _startBtn;
-}
-
-- (void)startAction:(id)sender
-{
-    _drawBoardView = [[FMDrawBoarderView alloc] init];
-    [_drawBoardView show];
 }
 
 - (void)didReceiveMemoryWarning {
