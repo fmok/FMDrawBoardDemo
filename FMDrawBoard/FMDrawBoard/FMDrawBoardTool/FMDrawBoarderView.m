@@ -96,8 +96,8 @@
 }
 
 #pragma mark - Public methods
-- (void)show {
-    
+- (void)show
+{
     _myDrawer.lines = [NSMutableArray arrayWithArray:self.linesInfo];
     for (CALayer * layer in _myDrawer.lines) {
         [_myDrawer.layer addSublayer:layer];
@@ -115,8 +115,8 @@
                      }completion:nil];
 }
 
-- (void)dismiss{
-    
+- (void)dismiss
+{
     [UIView animateWithDuration:0.3f
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
@@ -179,7 +179,7 @@
             [self.delAllBtn setEnabled:NO];
             [self.fwBtn setEnabled:NO];
         }
-    }else if([keyPath isEqualToString:@"canceledLines"]){
+    } else if([keyPath isEqualToString:@"canceledLines"]){
         NSMutableArray * canceledLines = [_myDrawer mutableArrayValueForKey:@"canceledLines"];
         if (canceledLines.count) {
             [self.ntBtn setEnabled:YES];

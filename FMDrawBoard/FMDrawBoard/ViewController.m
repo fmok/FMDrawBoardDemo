@@ -46,6 +46,8 @@
     if (!_startBtn) {
         _startBtn = [[UIButton alloc] initWithFrame:CGRectZero];
         _startBtn.backgroundColor = [UIColor yellowColor];
+        _startBtn.layer.cornerRadius = 10.f;
+        _startBtn.clipsToBounds = YES;
         [_startBtn setTitle:@"start" forState:UIControlStateNormal];
         [_startBtn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
         [_startBtn addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];

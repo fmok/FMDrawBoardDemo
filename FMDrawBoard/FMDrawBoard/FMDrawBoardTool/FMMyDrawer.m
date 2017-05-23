@@ -49,7 +49,6 @@
         _slayer = slayer;
         [[self mutableArrayValueForKey:@"canceledLines"] removeAllObjects];
         [[self mutableArrayValueForKey:@"lines"] addObject:_slayer];
-        
     }
 }
 
